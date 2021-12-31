@@ -5,15 +5,16 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Controllers\ProductController.cs~RF2391c063.TMP" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\core\ILearningApp.Application\ILearningApp.Application.csproj" />
     <ProjectReference Include="..\..\Infrastructure\ILearningApp.Persistence\ILearningApp.Persistence.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Controllers\" />
   </ItemGroup>
 
 </Project>

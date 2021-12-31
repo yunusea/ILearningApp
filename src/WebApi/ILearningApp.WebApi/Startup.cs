@@ -1,3 +1,4 @@
+using ILearningApp.Application;
 using ILearningApp.Persistence;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -33,8 +34,8 @@ namespace ILearningApp.WebApi
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "ILearningApp.WebApi", Version = "v1" });
             });
-
-            services.AddPersistanceServices();
+            services.AddApplicationRegistration();
+            services.AddPersistanceRegistration();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

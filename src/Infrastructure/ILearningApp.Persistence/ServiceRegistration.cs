@@ -13,11 +13,11 @@ namespace ILearningApp.Persistence
 {
     public static class ServiceRegistration
     {
-        public static void AddPersistanceServices(this IServiceCollection ServiceCollection)
+        public static void AddPersistanceRegistration(this IServiceCollection service)
         {
-            ServiceCollection.AddDbContext<ApplicationDbContext>(opt => opt.UseInMemoryDatabase("MemoryDb"));
+            service.AddDbContext<ApplicationDbContext>(opt => opt.UseInMemoryDatabase("MemoryDb"));
 
-            ServiceCollection.AddTransient<IProductRepository, ProductRepository>();
+            service.AddTransient<IProductRepository, ProductRepository>();
         }
     }
 }
